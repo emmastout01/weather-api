@@ -7,6 +7,15 @@ const App = () => {
             <h1>Hello, world!</h1>
         </div>
     )
+
+    /* routes:
+     - Home
+     - forecast/zipcode
+     - current/zipcode
+     - history/zipcode
+
+    */
+
 }
 
 export default App;
