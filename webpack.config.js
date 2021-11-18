@@ -29,6 +29,7 @@ module.exports = {
     },
     static: path.join(__dirname, "public/"),
     hot: true,
+    historyApiFallback: true,
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
 };
