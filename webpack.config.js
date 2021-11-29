@@ -31,5 +31,12 @@ module.exports = {
     hot: true,
     historyApiFallback: true,
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      "process.env.REACT_APP_WEATHER_API_KEY": JSON.stringify(
+        process.env.REACT_APP_WEATHER_API_KEY
+      ),
+    }),
+  ],
 };
