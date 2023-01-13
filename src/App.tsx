@@ -7,7 +7,6 @@ import Current from "./routes/Current";
 import History from "./routes/History";
 import Header from "./components/Header";
 
-
 const App = () => {
     const queryClient = new QueryClient();
 

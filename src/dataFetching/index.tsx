@@ -1,7 +1,7 @@
 const baseUrl = "http://api.weatherapi.com";
 
-export const fetchCurrent = async (location: string) => {
-  const currentUrl = `${baseUrl}/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${location}&aqi=no`;
+export const fetchCurrent = async (locale: string) => {
+  const currentUrl = `${baseUrl}/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${locale}&aqi=no`;
   const response = await fetch(currentUrl);
   if (!response.ok) {
     throw new Error("could not fetch current weather");
@@ -9,8 +9,8 @@ export const fetchCurrent = async (location: string) => {
   return response.json();
 };
 
-export const fetchForecast = async (location: string, days: number) => {
-  const forecastUrl = `${baseUrl}/v1/forecast.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${location}&days=${days}&aqi=no&alerts=no`;
+export const fetchForecast = async (locale: string, days: number) => {
+  const forecastUrl = `${baseUrl}/v1/forecast.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${locale}&days=${days}&aqi=no&alerts=no`;
   const response = await fetch(forecastUrl);
   if (!response.ok) {
     throw new Error("could not fetch forecast");
@@ -18,8 +18,8 @@ export const fetchForecast = async (location: string, days: number) => {
   return response.json();
 };
 
-export const fetchHistory = async (location: string, date: Date) => {
-  const historyUrl = `${baseUrl}/v1/history.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${location}&dt=${date}`;
+export const fetchHistory = async (locale: string, date: Date) => {
+  const historyUrl = `${baseUrl}/v1/history.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${locale}&dt=${date}`;
   const response = await fetch(historyUrl);
   if (!response.ok) {
     throw new Error(`could not fetch previous weather for ${date}`);
