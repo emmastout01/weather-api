@@ -19,9 +19,9 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="forecast/:location" element={<Forecast />} />
-          <Route path="current/:location" element={<Current />} />
-          <Route path="history/:location" element={<History />} />
+          <Route path="forecast/:locale" element={<Forecast />} />
+          <Route path="current/:locale" element={<Current />} />
+          <Route path="history/:locale" element={<History />} />
         </Routes>
       </QueryClientProvider>
     );
