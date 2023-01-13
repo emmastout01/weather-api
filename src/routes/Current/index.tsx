@@ -5,6 +5,7 @@ const Current = () => {
     const { locale } = useParams();
 
     useEffect(() => {
+        // useEffect logic
 
     })
 
